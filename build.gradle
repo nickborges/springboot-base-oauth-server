@@ -1,0 +1,55 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'br.com.springboot.base'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter")
+	compile("org.springframework.boot:spring-boot-starter-parent:2.0.3.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("com.jayway.jsonpath:json-path:2.2.0")
+	compile("org.projectlombok:lombok:1.18.4")
+	annotationProcessor 'org.projectlombok:lombok:1.18.4'
+	/**** Test ****/
+	//compile("de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("org.springframework.boot:spring-boot-starter-test")
+	compile("org.hsqldb:hsqldb")
+	compile ("org.springframework.boot:spring-boot-starter-jdbc:2.1.1.RELEASE")
+	/**** MongoDB ****/
+	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+	/**** Log4j2 ****/
+	compile("org.springframework.boot:spring-boot-starter-log4j2")
+	compile("com.lmax:disruptor:3.3.6") // <AsyncLogger> log4j2.xml
+	/**** Mapper ****/
+	compile ("org.codehaus.jackson:jackson-mapper-asl:1.9.13")
+	compile("org.modelmapper:modelmapper:2.3.0")
+	/**** swagger ****/
+	compile("io.springfox:springfox-swagger2:2.9.2")
+	compile("io.springfox:springfox-swagger-ui:2.5.0")
+}
+
+/**sem isto, deve ser descomentado a dependencia <wls:package-name>org.slf4j.*</wls:package-name> no arquivo weblogic.xml**/
+configurations {
+	all*.exclude module : 'spring-boot-starter-logging'	//exclui loggin slf4 padrão do spring boot, para usar o spring-boot-starter-log4j2
+}
