@@ -14,4 +14,8 @@ public class SpringbootBaseOAuthController implements SpringbootBaseOAuthControl
 
     private final Logger log = LogManager.getLogger(this.getClass());
 
+    @GetMapping("/teste")
+    public String test(){
+        return "Hello World";
+    }
 }

@@ -31,13 +31,14 @@ dependencies {
 	compile("org.projectlombok:lombok:1.18.4")
 	annotationProcessor 'org.projectlombok:lombok:1.18.4'
 	/**** Test ****/
-	//compile("de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0")
-	compile("org.springframework.boot:spring-boot-starter-data-jpa")
 	compile("org.springframework.boot:spring-boot-starter-test")
-	compile("org.hsqldb:hsqldb")
-	compile ("org.springframework.boot:spring-boot-starter-jdbc:2.1.1.RELEASE")
+	compile("org.springframework.security:spring-security-test")
 	/**** MongoDB ****/
-	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+	//compile("de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0")
+	//compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	//compile("org.hsqldb:hsqldb")
+	//compile ("org.springframework.boot:spring-boot-starter-jdbc:2.1.1.RELEASE")
+	//compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 	/**** Log4j2 ****/
 	compile("org.springframework.boot:spring-boot-starter-log4j2")
 	compile("com.lmax:disruptor:3.3.6") // <AsyncLogger> log4j2.xml
@@ -47,6 +48,8 @@ dependencies {
 	/**** swagger ****/
 	compile("io.springfox:springfox-swagger2:2.9.2")
 	compile("io.springfox:springfox-swagger-ui:2.5.0")
+	/**** oAuth2 ****/
+	compile("org.springframework.cloud:spring-cloud-starter-oauth2:2.1.2.RELEASE")
 }
 
 /**sem isto, deve ser descomentado a dependencia <wls:package-name>org.slf4j.*</wls:package-name> no arquivo weblogic.xml**/
