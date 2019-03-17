@@ -1,6 +1,7 @@
 package br.com.springboot.base.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
@@ -16,10 +17,11 @@ import io.swagger.annotations.ApiResponses;
 })
 interface SpringbootBaseOAuthControllerApi {
 
-    /*@ApiOperation(value = "Retrieve a list of ConsultaVeiculosResponse.")
+    @ApiOperation(value = "Retrieve a list of test.")
     @ApiResponses({
             @ApiResponse(code = 200,
                          message = "Operação realizada com sucesso.",
-                         response = ConsultaVeiculosResponse.class)
-    })*/
+                         response = String.class)
+    })
+    public String test();
 }

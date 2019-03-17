@@ -46,11 +46,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return authProvider;
     }
 
-    /*@Bean
-    public PasswordEncoder encoder() {
-        return new BCryptPasswordEncoder(11);
-    }*/
-
     @Bean
     public PasswordEncoder encoder() {
         String idForEncode = "bcrypt";

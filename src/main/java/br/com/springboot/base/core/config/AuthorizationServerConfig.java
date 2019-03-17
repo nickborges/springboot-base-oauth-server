@@ -25,9 +25,9 @@ import java.util.Map;
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    @Value("${oauth.client}")
+    @Value("${security.oauth2.client.clientId}")
     private String CLIENT_ID;
-    @Value("${oauth.secret}")
+    @Value("${security.oauth2.client.clientSecret}")
     private String CLIENT_SECRET;
     private final String GRANT_TYPE_PASSWORD = "password";
     private final String AUTHORIZATION_CODE = "authorization_code";

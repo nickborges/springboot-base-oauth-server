@@ -16,7 +16,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'br.com.springboot.base'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 sourceCompatibility = 1.8
 
 repositories {
@@ -50,6 +50,8 @@ dependencies {
 	compile("io.springfox:springfox-swagger-ui:2.5.0")
 	/**** oAuth2 ****/
 	compile("org.springframework.cloud:spring-cloud-starter-oauth2:2.1.2.RELEASE")
+	compile("org.springframework.security.oauth:spring-security-oauth2:2.3.5.RELEASE")
+
 }
 
 /**sem isto, deve ser descomentado a dependencia <wls:package-name>org.slf4j.*</wls:package-name> no arquivo weblogic.xml**/
