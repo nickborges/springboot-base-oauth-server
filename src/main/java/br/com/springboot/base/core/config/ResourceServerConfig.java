@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHand
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 
-    /*@Override
+    @Override
     public void configure(HttpSecurity http) throws Exception {
         http.
                 anonymous()
@@ -23,18 +23,18 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());
-    }*/
-    @Override
+    }
+    /*@Override
     public void configure(HttpSecurity http) throws Exception {
         http.anonymous().and()
                 .authorizeRequests()
                 .antMatchers("/", "/lib/*", "/images/*", "/css/*", "/swagger-ui.js","/swagger-ui.min.js", "/api-docs", "/fonts/*", "/api-docs/*", "/api-docs/default/*", "/o2c.html","index.html","/webjars/**","/hystrix/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/my").access("#oauth2.hasScope('my-resource.read')")
                 .anyRequest().authenticated();
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void configure(ResourceServerSecurityConfigurer resources) {
         resources.resourceId("my-resource");
-    }
+    }*/
 }
