@@ -23,5 +23,5 @@ interface SpringbootBaseOAuthControllerApi {
                          message = "Operação realizada com sucesso.",
                          response = String.class)
     })
-    public String test();
+    String test();
 }
