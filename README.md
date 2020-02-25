@@ -18,4 +18,4 @@
   -d 'grant_type=client_credentials'
 ```
   
-###### para usar no postman, aba Authorization > Basic Auth > Username = clientId / Password = clientSecret
+###### para usar no postman, aba Authorization > Basic Auth > Username = valorDoClientId / Password = valorDoClientSecret
