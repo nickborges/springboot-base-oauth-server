@@ -17,5 +17,4 @@
   -H 'Authorization: Basic Y2xpZW50OiQyYSQxMCROMGVxTml1aWtXQ3k5RVRRMXJkYXUuWEVFTGN5RU83a3Vra2ZvaU5JU2svOUY3Z3c2ZUIwVw==' \
   -d 'grant_type=client_credentials'
 ```
-  
 ###### para usar no postman, aba Authorization > Basic Auth > Username = valorDoClientId / Password = valorDoClientSecret
