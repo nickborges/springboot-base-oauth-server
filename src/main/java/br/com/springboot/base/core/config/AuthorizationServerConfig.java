@@ -29,6 +29,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private String CLIENT_ID;
     @Value("${security.oauth2.client.clientSecret}")
     private String CLIENT_SECRET;
+    private final String GRANT_TYPE_CLIENT_CREDENTIALS = "client_credentials";
     private final String GRANT_TYPE_PASSWORD = "password";
     private final String AUTHORIZATION_CODE = "authorization_code";
     private final String REFRESH_TOKEN = "refresh_token";
@@ -45,7 +46,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .inMemory()
                 .withClient(CLIENT_ID)
                 .secret(passwordEncoder().encode(CLIENT_SECRET))
-                .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN)
+                .authorizedGrantTypes(GRANT_TYPE_CLIENT_CREDENTIALS, GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN)
                 .scopes(SCOPE_READ, SCOPE_WRITE)
                 .accessTokenValiditySeconds(VALID_FOREVER)
                 .refreshTokenValiditySeconds(VALID_FOREVER);

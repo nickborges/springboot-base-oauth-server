@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
  * @author Nick Kras Borges
  */
 @RestController
-@RequestMapping(Constantes.API)
 public class SpringbootBaseOAuthController implements SpringbootBaseOAuthControllerApi {
 
     private final Logger log = LogManager.getLogger(this.getClass());
